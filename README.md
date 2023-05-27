@@ -26,6 +26,9 @@ select url_host('https://www.sqlite.org/vtab.html#usage'); -- 'www.sqlite.org'
 select url_path('https://www.sqlite.org/vtab.html#usage'); -- '/vtab.html'
 select url_fragment('https://www.sqlite.org/vtab.html#usage'); -- 'usage'
 ```
+## Demo
+
+Here's [a SQL query in Datasette Lite](https://lite.datasette.io/?memory=1&install=datasette-sqlite-url-lite#/_memory?sql=select+'url_valid()'+as+fn%2C+url_valid(%3Aurl)+as+result%0Aunion+all%0Aselect+'url_scheme()'%2C+url_scheme(%3Aurl)%0Aunion+all%0Aselect+'url_host()'%2C+url_host(%3Aurl)%0Aunion+all%0Aselect+'url_path()'%2C+url_path(%3Aurl)%0Aunion+all%0Aselect+'url_fragment()'%2C+url_fragment(%3Aurl)%3B&url=https%3A%2F%2Fwww.sqlite.org%2Fvtab.html%23usage) that demonstrates all of the functions.
 
 ## Development
 
